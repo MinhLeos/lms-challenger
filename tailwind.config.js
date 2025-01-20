@@ -13,6 +13,7 @@ export default {
       fontFamily: {
         outfit: ['Outfit', 'sans-serif'],
         young: ['Young Serif', 'serif'],
+        inter: ['Inter', 'serif']
       },
       colors: {
         primary: {
@@ -36,6 +37,14 @@ export default {
           "150": "#dfdbd6",
           "600": "#5b544f",
           "900": "#2e2b29"
+        },
+        grey: {
+          "700": "#333333",
+          "800": "#1e1e1e",
+          "900": "#141414"
+        },
+        green: {
+          DEFAULT: "#c5f82a"
         }
       },
     }
