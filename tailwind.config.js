@@ -13,7 +13,8 @@ export default {
       fontFamily: {
         outfit: ['Outfit', 'sans-serif'],
         young: ['Young Serif', 'serif'],
-        inter: ['Inter', 'serif']
+        inter: ['Inter', 'serif'],
+        figtree: ['Figtree', 'serif']
       },
       colors: {
         primary: {
@@ -22,7 +23,9 @@ export default {
         },
         gray: {
           "300": "#68778d",
+          "500": "#6b6b6b",
           "700": "#1f314f",
+          "950": "#121212",
           DEFAULT: '#d5e1ef',
         },
         brown: {
@@ -45,7 +48,13 @@ export default {
         },
         green: {
           DEFAULT: "#c5f82a"
+        },
+        yellow: {
+          DEFAULT: "#f4d04e"
         }
+      },
+      boxShadow: {
+        custom: '8px 8px rgba(0, 0, 0, 1)'
       },
     }
   },
