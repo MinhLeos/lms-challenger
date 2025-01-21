@@ -14,7 +14,8 @@ export default {
         outfit: ['Outfit', 'sans-serif'],
         young: ['Young Serif', 'serif'],
         inter: ['Inter', 'serif'],
-        figtree: ['Figtree', 'serif']
+        figtree: ['Figtree', 'serif'],
+        worksans: ["Work Sans", 'serif']
       },
       colors: {
         primary: {
@@ -51,6 +52,13 @@ export default {
         },
         yellow: {
           DEFAULT: "#f4d04e"
+        },
+        pink: {
+          light: '#f9f0ff'
+        },
+        purple: {
+          grayish: '#8c6991',
+          dark: '#2f1533'
         }
       },
       boxShadow: {

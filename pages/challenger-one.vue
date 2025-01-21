@@ -14,7 +14,11 @@
   </section>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+useHead({
+  title: "QR Code Component",
+});
+</script>
 
 <style lang="scss" scoped>
 .section-container {

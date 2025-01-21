@@ -9,4 +9,10 @@ export default defineNuxtConfig({
     },
   },
   css: ["~/assets/css/tailwind.css"],
+  app: {
+    head: {
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon-32x32.png" }],
+      title: "LMS FE Challenger",
+    },
+  },
 });

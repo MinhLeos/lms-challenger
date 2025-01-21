@@ -8,6 +8,11 @@ import type { BlogReviewType } from "~/types/BlogReview";
 definePageMeta({
   layout: "challenger-four",
 });
+
+useHead({
+  title: "Blog Preview Card",
+});
+
 const blogReviewData: BlogReviewType = {
   bannerUrl: "https://mgisolutions-coffee.imgix.net/special-coffee/illustration-article.svg",
   bannerAltText: "illustration-article",

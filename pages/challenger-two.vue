@@ -35,6 +35,9 @@ import {
 definePageMeta({
   layout: "challenger-two",
 });
+useHead({
+  title: "Recipe Page",
+});
 </script>
 
 <style lang="scss" scoped>
