@@ -1,9 +1,9 @@
 <template>
   <section
-    class="flex flex-col items-start justify-start bg-white rounded-lg p-5 shadow-custom w-[320px] sm:w-[400px] border border-solid border-black"
+    class="flex flex-col items-start justify-start bg-white rounded-2xl p-5 shadow-custom w-[320px] sm:w-[400px] border border-solid border-black"
   >
     <Image
-      class-name="rounded-lg w-full h-auto"
+      class-name="rounded-xl w-full h-auto"
       :alt-text="blogReview.bannerAltText"
       :src="blogReview.bannerUrl"
       :width="350"
