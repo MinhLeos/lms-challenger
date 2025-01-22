@@ -8,8 +8,8 @@
     </div>
     <div class="w-full mt-3">
       <details v-for="(faq, index) in faqData" :key="index" class="faq-item" @toggle="handleToggle" :open="index === 0">
-        <summary class="list-none cursor-pointer py-5">
-          <div class="flex items-center justify-between gap-5 active:text-purple summary-content">
+        <summary class="list-none cursor-pointer py-5 active:text-purple summary-container">
+          <div class="flex items-center justify-between gap-5">
             <p class="text-lg leading-5 font-bold">{{ faq.question }}</p>
             <Icon class="close" width="28px" height="28px" type="iconPlus" />
             <Icon class="open" width="28px" height="28px" type="iconMinus" />
@@ -98,7 +98,7 @@ const handleToggle = (event: Event) => {
   }
 }
 @media (hover: hover) {
-  .summary-content {
+  .summary-container {
     @apply hover:text-purple;
   }
 }
