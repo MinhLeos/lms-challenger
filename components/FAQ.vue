@@ -9,7 +9,7 @@
     <div class="w-full mt-3">
       <details v-for="(faq, index) in faqData" :key="index" class="faq-item" @toggle="handleToggle" :open="index === 0">
         <summary class="list-none cursor-pointer py-5">
-          <div class="flex items-center justify-between gap-5 hover:text-purple">
+          <div class="flex items-center justify-between gap-5 active:text-purple summary-content">
             <p class="text-lg leading-5 font-bold">{{ faq.question }}</p>
             <Icon class="close" width="28px" height="28px" type="iconPlus" />
             <Icon class="open" width="28px" height="28px" type="iconMinus" />
@@ -95,6 +95,11 @@ const handleToggle = (event: Event) => {
   .answer {
     height: auto;
     transition: height 0.3s ease;
+  }
+}
+@media (hover: hover) {
+  .summary-content {
+    @apply hover:text-purple;
   }
 }
 </style>
