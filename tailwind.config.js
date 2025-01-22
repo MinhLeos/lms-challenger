@@ -58,7 +58,8 @@ export default {
         },
         purple: {
           grayish: '#8c6991',
-          dark: '#2f1533'
+          dark: '#2f1533',
+          DEFAULT: '#AD28EB'
         }
       },
       boxShadow: {
