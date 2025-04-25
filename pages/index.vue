@@ -5,6 +5,7 @@
     <NuxtLink :prefetch-on="hover" to="/challenger-three">Challenger 3</NuxtLink>
     <NuxtLink :prefetch-on="hover" to="/challenger-four">Challenger 4</NuxtLink>
     <NuxtLink :prefetch-on="hover" to="/challenger-five">Challenger 5</NuxtLink>
+    <NuxtLink :prefetch-on="hover" to="/slider">Slider</NuxtLink>
   </div>
 </template>
 
