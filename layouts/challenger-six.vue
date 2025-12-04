@@ -12,7 +12,8 @@
           <div class="flex items-center gap-3">
             <img 
               src="~/assets/images/logo.svg" 
-              alt="Weather App Logo" 
+              alt="" 
+              role="presentation"
               class="h-8 w-auto"
             />
           </div>
@@ -25,17 +26,14 @@
         </div>
       </header>
 
-      <!-- Title Section - Hidden during error/loading -->
-      <section v-if="!hasError && !isLoading" class="w-full px-8 md:px-8 lg:px-16 mb-6 lg:mb-10">
-        <div class="max-w-[1200px] mx-auto">
+      <!-- Main content -->
+      <main class="w-full px-4 md:px-8 lg:px-16 pb-8">
+        <!-- Title Section - Hidden during error/loading -->
+        <div v-if="!hasError && !isLoading" class="max-w-[1200px] mx-auto mb-6 lg:mb-10">
           <h1 class="font-bricolage text-5xl md:text-4xl font-bold text-neutral-0 text-center">
             How's the sky looking today?
           </h1>
         </div>
-      </section>
-
-      <!-- Main content -->
-      <main class="w-full px-4 md:px-8 lg:px-16 pb-8">
         <div class="max-w-[1200px] mx-auto">
           <slot />
         </div>
