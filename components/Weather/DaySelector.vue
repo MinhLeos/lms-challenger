@@ -2,6 +2,7 @@
   <!-- Compact Mode (Dropdown) -->
   <div v-if="compact" class="relative">
     <button 
+      type="button"
       class="flex items-center gap-2 bg-transparent border border-neutral-600 rounded-lg px-3 py-1.5 text-sm text-neutral-0 hover:bg-neutral-700 transition-colors"
       @click="isOpen = !isOpen"
     >
@@ -27,6 +28,7 @@
         <button 
           v-for="(day, index) in days" 
           :key="day.date"
+          type="button"
           class="w-full px-4 py-2.5 text-left text-base text-neutral-0 hover:bg-neutral-700 transition-colors"
           @click="selectDay(index); isOpen = false"
         >
@@ -44,6 +46,7 @@
     <button 
       v-for="(day, index) in days" 
       :key="day.date"
+      type="button"
       :class="[
         'px-4 py-2 rounded-lg text-sm font-medium transition-colors whitespace-nowrap flex-shrink-0',
         modelValue === index 

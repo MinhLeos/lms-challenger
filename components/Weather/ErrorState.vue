@@ -20,6 +20,7 @@
     
     <!-- Retry Button -->
     <button 
+      type="button"
       class="flex items-center gap-2 bg-neutral-700 hover:bg-neutral-600 text-neutral-0 font-medium px-5 py-2.5 rounded-lg transition-colors focus:outline focus:outline-2 focus:outline-neutral-0 focus:outline-offset-4"
       @click="$emit('retry')"
     >

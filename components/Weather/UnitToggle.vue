@@ -2,6 +2,7 @@
   <div class="relative">
     <!-- Toggle Button -->
     <button 
+      type="button"
       class="flex items-center gap-2 bg-transparent border border-neutral-600 rounded-lg py-3 px-4 text-neutral-0 focus:outline focus:outline-neutral-0 focus:outline-offset-4 active:outline active:outline-neutral-0 active:outline-offset-4"
       @click="toggleDropdown"
     >
@@ -38,6 +39,7 @@
       >
         <!-- Header - Switch Action -->
         <button 
+          type="button"
           class="w-full px-4 py-3 text-left text-neutral-0 font-semibold hover:bg-neutral-700 focus:outline-none focus:bg-neutral-700 transition-colors border-b border-neutral-700"
           @click="switchAllUnits"
         >
@@ -48,6 +50,7 @@
         <div class="py-2">
           <p class="px-4 py-1 text-neutral-400 text-sm">Temperature</p>
           <button 
+            type="button"
             class="w-full flex items-center justify-between mx-2 px-2 py-2.5 text-neutral-0 hover:bg-neutral-700 rounded-lg focus:outline focus:outline-2 focus:outline-neutral-0 transition-colors"
             style="width: calc(100% - 16px);"
             @click="selectTemperature('celsius')"
@@ -58,6 +61,7 @@
             </svg>
           </button>
           <button 
+            type="button"
             class="w-full flex items-center justify-between mx-2 px-2 py-2.5 text-neutral-0 hover:bg-neutral-700 rounded-lg focus:outline focus:outline-2 focus:outline-neutral-0 transition-colors"
             style="width: calc(100% - 16px);"
             @click="selectTemperature('fahrenheit')"
@@ -73,6 +77,7 @@
         <div class="py-2 border-t border-neutral-700">
           <p class="px-4 py-1 text-neutral-400 text-sm">Wind Speed</p>
           <button 
+            type="button"
             class="w-full flex items-center justify-between mx-2 px-2 py-2.5 text-neutral-0 hover:bg-neutral-700 rounded-lg focus:outline focus:outline-2 focus:outline-neutral-0 transition-colors"
             style="width: calc(100% - 16px);"
             @click="selectWindSpeed('kmh')"
@@ -83,6 +88,7 @@
             </svg>
           </button>
           <button 
+            type="button"
             class="w-full flex items-center justify-between mx-2 px-2 py-2.5 text-neutral-0 hover:bg-neutral-700 rounded-lg focus:outline focus:outline-2 focus:outline-neutral-0 transition-colors"
             style="width: calc(100% - 16px);"
             @click="selectWindSpeed('mph')"
@@ -98,6 +104,7 @@
         <div class="py-2 border-t border-neutral-700">
           <p class="px-4 py-1 text-neutral-400 text-sm">Precipitation</p>
           <button 
+            type="button"
             class="w-full flex items-center justify-between mx-2 px-2 py-2.5 text-neutral-0 hover:bg-neutral-700 rounded-lg focus:outline focus:outline-2 focus:outline-neutral-0 transition-colors"
             style="width: calc(100% - 16px);"
             @click="selectPrecipitation('mm')"
@@ -108,6 +115,7 @@
             </svg>
           </button>
           <button 
+            type="button"
             class="w-full flex items-center justify-between mx-2 px-2 py-2.5 text-neutral-0 hover:bg-neutral-700 rounded-lg focus:outline focus:outline-2 focus:outline-neutral-0 transition-colors"
             style="width: calc(100% - 16px);"
             @click="selectPrecipitation('inch')"

@@ -10,6 +10,7 @@
           />
         </div>
         <button 
+          type="button"
           class="bg-blue-500 hover:bg-blue-600 text-neutral-0 font-semibold px-6 py-3 rounded-xl transition-colors focus:outline focus:outline-2 focus:outline-neutral-0 focus:outline-offset-4 whitespace-nowrap"
           @click="handleSearchClick"
         >
