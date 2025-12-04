@@ -4,7 +4,8 @@
     <div class="relative">
       <img 
         src="~/assets/images/icon-search.svg" 
-        alt="Search" 
+        alt="" 
+        role="presentation"
         class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 opacity-60"
       />
       <input 
@@ -39,7 +40,8 @@
         <div v-if="isSearching" class="px-4 py-3 flex items-center gap-3">
           <img 
             src="~/assets/images/icon-loading.svg" 
-            alt="Loading" 
+            alt="" 
+            role="presentation"
             class="w-5 h-5 animate-spin opacity-60"
           />
           <span class="text-neutral-300">Search in progress</span>

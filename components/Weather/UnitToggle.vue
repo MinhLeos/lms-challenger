@@ -7,7 +7,8 @@
     >
       <img 
         src="~/assets/images/icon-units.svg" 
-        alt="Units" 
+        alt="" 
+        role="presentation"
         class="w-5 h-5"
       />
       <span class="text-sm font-medium">Units</span>
