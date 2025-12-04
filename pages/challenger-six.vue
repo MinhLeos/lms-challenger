@@ -89,6 +89,7 @@
 import type { Location, UnitSystem } from '~/types/Weather'
 import { useWeather } from '~/composables/useWeather'
 import { useGeocoding } from '~/composables/useGeocoding'
+import { useGeolocation } from '~/composables/useGeolocation'
 
 definePageMeta({
   layout: 'challenger-six'
@@ -99,6 +100,7 @@ const unit = inject<Ref<UnitSystem>>('weatherUnit', ref('metric'))
 
 // Composables
 const { weather, location: selectedLocation, isLoading, error, fetchWeather, getHourlyForDay } = useWeather()
+const { getCurrentLocation } = useGeolocation()
 
 // Provide error/loading state to layout
 const hasError = computed(() => !!error.value && !weather.value)
@@ -158,17 +160,29 @@ async function retryFetch() {
   }
 }
 
-// Load default location on mount (optional - Ho Chi Minh City)
+// Load current location on mount
 onMounted(async () => {
-  // Uncomment to auto-load a default city
-  // const defaultLocation: Location = {
-  //   id: 1566083,
-  //   name: 'Ho Chi Minh City',
-  //   latitude: 10.8231,
-  //   longitude: 106.6297,
-  //   country: 'Vietnam'
-  // }
-  // await fetchWeather(defaultLocation, unit.value)
+  // Default location: Hanoi, Vietnam
+  const defaultLocation: Location = {
+    id: 1581130,
+    name: 'Hanoi',
+    latitude: 21.0285,
+    longitude: 105.8542,
+    country: 'Vietnam'
+  }
+  
+  // Load default location first
+  searchQuery.value = `${defaultLocation.name}, ${defaultLocation.country}`
+  await fetchWeather(defaultLocation, unit.value)
+  
+  // Then try to get user's current location (if allowed)
+  const currentLocation = await getCurrentLocation()
+  if (currentLocation) {
+    searchQuery.value = currentLocation.country 
+      ? `${currentLocation.name}, ${currentLocation.country}`
+      : currentLocation.name
+    await fetchWeather(currentLocation, unit.value)
+  }
 })
 </script>
 
