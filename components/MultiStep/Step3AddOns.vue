@@ -10,6 +10,7 @@
       <button
         v-for="addon in ADD_ONS"
         :key="addon.id"
+        type="button"
         @click="toggleAddOn(addon.id)"
         class="flex w-full items-center gap-4 rounded-lg border p-4 text-left transition-all lg:gap-6 lg:px-6"
         :class="[

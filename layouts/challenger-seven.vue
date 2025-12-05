@@ -16,6 +16,7 @@
           <button
             v-for="step in STEPS"
             :key="step.number"
+            type="button"
             @click="goToStep(step.number)"
             class="flex h-[33px] w-[33px] items-center justify-center rounded-full border text-sm font-bold transition-all"
             :class="[
@@ -30,11 +31,11 @@
       </div>
 
       <!-- Mobile Content Card - uses negative margin to overlap header -->
-      <main class="-mt-[72px] mx-4 mb-4 pb-20 relative z-10">
+      <section class="-mt-[72px] mx-4 mb-4 pb-20 relative z-10">
         <div class="bg-white rounded-[12px] p-6 shadow-lg">
           <slot />
         </div>
-      </main>
+      </section>
       
       <!-- Mobile Navigation Buttons (Fixed Bottom) -->
       <div 
@@ -44,12 +45,14 @@
         <div class="flex items-center" :class="currentStep > 1 ? 'justify-between' : 'justify-end'">
           <button
             v-if="currentStep > 1"
+            type="button"
             @click="prevStep"
             class="text-sm font-medium text-ms-coolgray transition-colors hover:text-ms-marine"
           >
             Go Back
           </button>
           <button
+            type="button"
             @click="nextStep"
             class="rounded-md px-4 py-3 text-sm font-medium text-white transition-colors"
             :class="[
@@ -80,9 +83,13 @@
           
           <nav class="relative z-10 flex flex-col gap-6">
             <template v-for="step in STEPS" :key="step.number">
-              <button
+              <div
+                role="button"
+                tabindex="0"
                 @click="goToStep(step.number)"
-                class="flex items-center gap-4 text-left"
+                @keydown.enter="goToStep(step.number)"
+                @keydown.space="goToStep(step.number)"
+                class="flex items-center gap-4 text-left cursor-pointer"
               >
                 <span
                   class="flex h-[33px] w-[33px] items-center justify-center rounded-full border text-sm font-bold transition-all"
@@ -94,13 +101,13 @@
                 >
                   {{ step.number }}
                 </span>
-                <div>
-                  <p class="text-xs text-ms-pastel">STEP {{ step.number }}</p>
-                  <p class="text-sm font-bold uppercase tracking-wider text-white">
+                <span class="flex flex-col">
+                  <span class="text-xs text-ms-pastel">STEP {{ step.number }}</span>
+                  <span class="text-sm font-bold uppercase tracking-wider text-white">
                     {{ step.shortTitle }}
-                  </p>
-                </div>
-              </button>
+                  </span>
+                </span>
+              </div>
             </template>
           </nav>
         </aside>
@@ -119,12 +126,14 @@
             <div class="flex items-center" :class="currentStep > 1 ? 'justify-between' : 'justify-end'">
               <button
                 v-if="currentStep > 1"
+                type="button"
                 @click="prevStep"
                 class="text-sm font-medium text-ms-coolgray transition-colors hover:text-ms-marine"
               >
                 Go Back
               </button>
               <button
+                type="button"
                 @click="nextStep"
                 class="rounded-lg px-6 py-3 text-sm font-medium text-white transition-colors"
                 :class="[

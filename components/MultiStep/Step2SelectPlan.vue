@@ -15,6 +15,7 @@
       <button
         v-for="plan in PLANS"
         :key="plan.id"
+        type="button"
         @click="selectPlan(plan.id)"
         class="flex items-start gap-4 rounded-lg border p-4 text-left transition-all lg:flex-col lg:gap-10 lg:p-5"
         :class="[
@@ -49,6 +50,7 @@
       </span>
       
       <button
+        type="button"
         @click="toggleBillingPeriod"
         class="relative h-5 w-10 rounded-full bg-ms-marine transition-colors"
         role="switch"

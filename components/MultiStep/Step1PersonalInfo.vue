@@ -9,13 +9,13 @@
       <!-- Name Field -->
       <div>
         <div class="flex items-center justify-between">
-          <label for="name" class="text-sm font-medium text-ms-marine">Name</label>
+          <label for="ms-name" class="text-sm font-medium text-ms-marine">Name</label>
           <span v-if="errors.name" class="text-sm font-semibold text-ms-strawberry">
             {{ errors.name }}
           </span>
         </div>
         <input
-          id="name"
+          id="ms-name"
           type="text"
           placeholder="e.g. Stephen King"
           :value="formData.personalInfo.name"
@@ -32,13 +32,13 @@
       <!-- Email Field -->
       <div>
         <div class="flex items-center justify-between">
-          <label for="email" class="text-sm font-medium text-ms-marine">Email Address</label>
+          <label for="ms-email" class="text-sm font-medium text-ms-marine">Email Address</label>
           <span v-if="errors.email" class="text-sm font-semibold text-ms-strawberry">
             {{ errors.email }}
           </span>
         </div>
         <input
-          id="email"
+          id="ms-email"
           type="email"
           placeholder="e.g. stephenking@lorem.com"
           :value="formData.personalInfo.email"
@@ -55,13 +55,13 @@
       <!-- Phone Field -->
       <div>
         <div class="flex items-center justify-between">
-          <label for="phone" class="text-sm font-medium text-ms-marine">Phone Number</label>
+          <label for="ms-phone" class="text-sm font-medium text-ms-marine">Phone Number</label>
           <span v-if="errors.phone" class="text-sm font-semibold text-ms-strawberry">
             {{ errors.phone }}
           </span>
         </div>
         <input
-          id="phone"
+          id="ms-phone"
           type="tel"
           placeholder="e.g. +1 234 567 890"
           :value="formData.personalInfo.phone"
@@ -74,6 +74,9 @@
           ]"
         />
       </div>
+      
+      <!-- Hidden submit button for accessibility -->
+      <button type="submit" class="sr-only">Submit</button>
     </form>
   </div>
 </template>

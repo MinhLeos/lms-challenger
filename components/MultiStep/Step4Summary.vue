@@ -14,6 +14,7 @@
             {{ selectedPlanDetails?.name }} ({{ billingLabel }})
           </h3>
           <button
+            type="button"
             @click="goToStep(2)"
             class="text-sm text-ms-coolgray underline transition-colors hover:text-ms-purplish"
           >
