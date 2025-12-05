@@ -18,6 +18,7 @@ export default {
         worksans: ["Work Sans", "serif"],
         "dm-sans": ["DM Sans", "sans-serif"],
         bricolage: ["Bricolage Grotesque", "sans-serif"],
+        ubuntu: ["Ubuntu", "sans-serif"],
       },
       colors: {
         primary: {
@@ -80,6 +81,16 @@ export default {
           500: "hsl(233, 67%, 56%)",
           700: "hsl(248, 70%, 36%)",
         },
+        // Multi-step Form Colors (Challenger Seven)
+        "ms-marine": "hsl(213, 96%, 18%)",
+        "ms-purplish": "hsl(243, 100%, 62%)",
+        "ms-pastel": "hsl(228, 100%, 84%)",
+        "ms-lightblue": "hsl(206, 94%, 87%)",
+        "ms-strawberry": "hsl(354, 84%, 57%)",
+        "ms-coolgray": "hsl(231, 11%, 63%)",
+        "ms-lightgray": "hsl(229, 24%, 87%)",
+        "ms-magnolia": "hsl(218, 100%, 97%)",
+        "ms-alabaster": "hsl(231, 100%, 99%)",
       },
       boxShadow: {
         custom: "8px 8px rgba(0, 0, 0, 1)",
